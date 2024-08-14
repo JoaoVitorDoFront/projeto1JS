@@ -1,0 +1,119 @@
+:root {
+  --primary-color: #34073d;
+}
+html {
+  background-image: linear-gradient(
+    to right,
+    rgb(139, 44, 44),
+    var(--primary-color)
+  );
+}
+h1,
+h2 {
+  font-size: 2em;
+}
+h1 {
+  margin-top: 1.5em;
+}
+body {
+  display: flex;
+  justify-content: center;
+  /* align-items: center; */
+  min-height: 100vh;
+  margin: 0;
+  color: white;
+  text-align: center;
+}
+#add-task-for {
+  text-align: center;
+  position: relative;
+}
+#add-task-for input {
+  box-sizing: border-box;
+  border: 1px solid var(--primary-color);
+  background-color: #fff;
+  color: var(--primary-color);
+  width: 100%;
+  font-size: 1.2em;
+  padding: 1em;
+}
+#tasks {
+  width: 31.25em;
+}
+#add-task-for input::placeholder {
+  color: #34073d;
+}
+#add-task-for input:focus {
+  outline: none;
+}
+#add-btn {
+  position: absolute;
+  background-color: #fff;
+  cursor: pointer;
+  border: 1px solid var(--primary-color);
+  transition: 0.5s;
+  width: 4.2em;
+  height: 4.6em;
+  top: 0;
+  /* right: 0; */
+}
+#add-btn:hover {
+  background-color: var(--primary-color);
+  color: #fff;
+}
+.bi-plus {
+  font-size: 1.6em;
+}
+#task-list {
+  list-style-type: none;
+  padding-left: 0;
+}
+#task-list li {
+  text-align: left;
+  height: 2.2em;
+  line-height: 2.2em;
+  position: relative;
+  border-bottom: 3px solid var(--primary-color);
+  background-color: #fff;
+  color: var(--primary-color);
+  margin-bottom: 0.8em;
+  padding: 1em 2.2em 1em 1em;
+  transition: 0.5s;
+  width: 100%;
+  font-weight: bold;
+}
+#task-list .bi {
+  position: absolute;
+  top: 0;
+  cursor: pointer;
+  height: 1.2em;
+  transition: 0.5s;
+  /* width: 2em; */
+  padding: 0.6em 0.1em 0.3em;
+  font-size: 2em;
+}
+#task-list span {
+  font-size: 1.2em;
+}
+#task-list li.done {
+  background-color: var(--primary-color);
+  color: #fff;
+  text-decoration: line-through;
+}
+.bi-check2 {
+  right: 1.2em;
+}
+.bi-check2:hover {
+  background-color: #09e01b;
+  color: #fff;
+}
+.bi-x {
+  right: 0;
+}
+.bi-x:hover {
+  background-color: #eb0927;
+  color: #fff;
+}
+.hide {
+  display: none;
+}
